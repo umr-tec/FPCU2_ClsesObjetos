@@ -46,14 +46,14 @@ namespace POOC_Ejemplo1
 
             //Clase Alumno
             Alumno alumno2 = new Alumno();
-            Alumno alumno1 = new Alumno("11111" ,"Luis Diego","Barajas","Escobar","ISIC","1") ;
+            Alumno alumno1 = new Alumno() ;
                    
             //Valores para el segundo objeto (alumno2)
             //Pedir los valores para las propiedades del objeto
             //Console.WriteLine("Ingresa la matricula del alumno");
             //alumno2.Matricula = Console.ReadLine();
             //Console.WriteLine("Ingresa el nombre del alumno");
-            //alumno2.NombreAlumno = Console.ReadLine();
+        
             //Console.WriteLine("Ingresa el primer apellido del alumno");
             //alumno2.PrimerApellidoAlumno = Console.ReadLine();
 

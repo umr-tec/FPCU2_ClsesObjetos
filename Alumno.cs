@@ -33,18 +33,20 @@ namespace POOC_Ejemplo1
             this.segundoApellidoAlumno = Console.ReadLine();
             Console.WriteLine("Ingresa la carrera del alumno (ISIC | IGEM | ILOG  | IIND):");
             this.nombreCarreraAlumno = Console.ReadLine();
+            //INICIALIZAR VARIABLE SEMESTRE
+            this.semestreAlumno = "1";
         }
 
         public Alumno(string matricula,string nombreAlumno,
            string primerApellidoAlumno,string segundoApellidoAlumno,
-           string nombreCarreraAlumno, string semestreAlumno) {
+           string nombreCarreraAlumno) {
             //Adignar valores de parametros a campos
             this.matricula = matricula;
             this.nombreAlumno = nombreAlumno;
             this.primerApellidoAlumno = primerApellidoAlumno;
             this.segundoApellidoAlumno = segundoApellidoAlumno;
             this.nombreCarreraAlumno = nombreCarreraAlumno;
-            this.semestreAlumno = semestreAlumno;
+            this.semestreAlumno = "1";
         }
 
         //Propiedades
@@ -57,7 +59,7 @@ namespace POOC_Ejemplo1
         public string NombreAlumno
         {
             get { return nombreAlumno; }
-            set { nombreAlumno = value; }
+          
         }
         //propiedad para primerApellidoAlumno
         public string PrimerApellidoAlumno
@@ -77,6 +79,7 @@ namespace POOC_Ejemplo1
             Console.WriteLine("\n");
             Console.WriteLine("Matricula del alumno: {0}", matricula);
             Console.WriteLine("Nombre completo del alumno: {0} {1} {2}", nombreAlumno,primerApellidoAlumno,segundoApellidoAlumno);
+            Console.WriteLine("Bienvenido al semestre {0}, de la carrera de {1}.", semestreAlumno, nombreCarreraAlumno);
             Console.WriteLine("\n");
             Console.WriteLine("\t \t SistemaTec ");
             Console.WriteLine("\n");
