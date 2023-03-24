@@ -40,27 +40,22 @@ namespace POOC_Ejemplo1
             //    objetoCasa2.MostrarDetalles();
             //    
             #endregion
+            string nombre, pApellido, sApellido, carrera, matroaula;
+            //Console.WriteLine("Ingresa la matricula del alumno");
+            //matroaula = Console.ReadLine();
 
             //Clase Alumno
-            Alumno alumno1 = new Alumno();
             Alumno alumno2 = new Alumno();
-
-            //Pedir los valores para las propiedades del objeto
-            Console.WriteLine("Ingresa la matricula del alumno");
-            alumno1.Matricula = Console.ReadLine();
-            Console.WriteLine("Ingresa el nombre del alumno");
-            alumno1.NombreAlumno = Console.ReadLine();
-            Console.WriteLine("Ingresa el primer apellido del alumno");
-            alumno1.PrimerApellidoAlumno = Console.ReadLine();
-
+            Alumno alumno1 = new Alumno("11111" ,"Luis Diego","Barajas","Escobar","ISIC","1") ;
+                   
             //Valores para el segundo objeto (alumno2)
             //Pedir los valores para las propiedades del objeto
-            Console.WriteLine("Ingresa la matricula del alumno");
-            alumno2.Matricula = Console.ReadLine();
-            Console.WriteLine("Ingresa el nombre del alumno");
-            alumno2.NombreAlumno = Console.ReadLine();
-            Console.WriteLine("Ingresa el primer apellido del alumno");
-            alumno2.PrimerApellidoAlumno = Console.ReadLine();
+            //Console.WriteLine("Ingresa la matricula del alumno");
+            //alumno2.Matricula = Console.ReadLine();
+            //Console.WriteLine("Ingresa el nombre del alumno");
+            //alumno2.NombreAlumno = Console.ReadLine();
+            //Console.WriteLine("Ingresa el primer apellido del alumno");
+            //alumno2.PrimerApellidoAlumno = Console.ReadLine();
 
             //Imprimir los valores
             alumno1.MostrarDetalles();

@@ -15,6 +15,37 @@ namespace POOC_Ejemplo1
         private string calleAlumno, coloniaAlumno, noCasaAlumno, ciudadAlumno, cpAlumno, estadoAlumno, paisAlumno;
         private char grupoSanguineoAlumno, rhAlumno; 
         private DateTime fechaIngresoAlumno;
+     
+        //Constructores
+        public Alumno() {
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Registro de alumnos de nuevo ingreso");
+            //Pedoir los valores de inicio
+            Console.WriteLine("Ingresa la matricula del alumno:");
+            this.matricula = Console.ReadLine();
+            Console.WriteLine("Ingresa el nombre del alumno:");
+            this.nombreAlumno = Console.ReadLine();
+            Console.WriteLine("Ingresa el primer apellido del alumno:");
+            this.primerApellidoAlumno = Console.ReadLine();
+            Console.WriteLine("Ingresa el segundo apellido del alumno:");
+            this.segundoApellidoAlumno = Console.ReadLine();
+            Console.WriteLine("Ingresa la carrera del alumno (ISIC | IGEM | ILOG  | IIND):");
+            this.nombreCarreraAlumno = Console.ReadLine();
+        }
+
+        public Alumno(string matricula,string nombreAlumno,
+           string primerApellidoAlumno,string segundoApellidoAlumno,
+           string nombreCarreraAlumno, string semestreAlumno) {
+            //Adignar valores de parametros a campos
+            this.matricula = matricula;
+            this.nombreAlumno = nombreAlumno;
+            this.primerApellidoAlumno = primerApellidoAlumno;
+            this.segundoApellidoAlumno = segundoApellidoAlumno;
+            this.nombreCarreraAlumno = nombreCarreraAlumno;
+            this.semestreAlumno = semestreAlumno;
+        }
 
         //Propiedades
         public string Matricula
@@ -36,8 +67,7 @@ namespace POOC_Ejemplo1
         }
 
         //Metodos
-        public void MostrarDetalles() {
-            Console.Clear();
+        public void MostrarDetalles() {            
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Red;
 
