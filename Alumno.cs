@@ -15,9 +15,11 @@ namespace POOC_Ejemplo1
         private string calleAlumno, coloniaAlumno, noCasaAlumno, ciudadAlumno, cpAlumno, estadoAlumno, paisAlumno;
         private char grupoSanguineoAlumno, rhAlumno; 
         private DateTime fechaIngresoAlumno;
+        private int folio = 0;
         //Constamte para establecer el no. de tec
         const string numeroTecnologico = "100";
-     
+        
+
         //Constructores
         public Alumno() {
             int year, month,day;
@@ -26,8 +28,8 @@ namespace POOC_Ejemplo1
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Registro de alumnos de nuevo ingreso");
             //Pedoir los valores de inicio
-            Console.WriteLine("Ingresa la matricula del alumno:");
-            this.matricula = Console.ReadLine();
+            //Console.WriteLine("Ingresa la matricula del alumno:");
+            //this.matricula = Console.ReadLine();
             Console.WriteLine("Ingresa el nombre del alumno:");
             this.nombreAlumno = Console.ReadLine();
             Console.WriteLine("Ingresa el primer apellido del alumno:");
@@ -46,6 +48,9 @@ namespace POOC_Ejemplo1
             Console.WriteLine("Ingresa el día de inscripción, en fomaro dd");
             day = Convert.ToInt32(Console.ReadLine());
             fechaIngresoAlumno = new DateTime(year, month, day);
+            //matricula
+            folio = folio + 1;
+            this.matricula = year.ToString().Substring(2) +""+ numeroTecnologico +""+ folio ;
         }
 
         public Alumno(string matricula,string nombreAlumno,
@@ -90,7 +95,7 @@ namespace POOC_Ejemplo1
             Console.WriteLine("Matricula del alumno: {0}", matricula);
             Console.WriteLine("Nombre completo del alumno: {0} {1} {2}", nombreAlumno,primerApellidoAlumno,segundoApellidoAlumno);
             Console.WriteLine("Bienvenido al semestre {0}, de la carrera de {1}.", semestreAlumno, nombreCarreraAlumno);
-            Console.WriteLine("FEcha de inscripción del alumno: {0}", fechaIngresoAlumno);
+            Console.WriteLine("Fecha de inscripción del alumno: {0}", fechaIngresoAlumno);
             Console.WriteLine("\n");
             Console.WriteLine("\t \t SistemaTec ");
             Console.WriteLine("\n");
